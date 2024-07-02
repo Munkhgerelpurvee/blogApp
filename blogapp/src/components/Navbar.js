@@ -1,36 +1,38 @@
 "use client";
 import Image from "next/image";
+import { IoMdSearch } from "react-icons/io";
+import { IoIosMenu } from "react-icons/io";
 
 export default function Navbar() {
   return (
-    <main className="flex p-14">
-      <div className="w-full max-w-5xl text-sm lg:flex ">
-        <div className="fixed top-0 left-0 flex justify-between w-full h-12 lg:static lg:h-auto lg:w-auto ">
-          
+    <main className="flex justify-between bg-slate-200 p-4">
+        <div className="">
             <Image
               src="/Logo.svg"
               alt="Logo"
               width={100}
               height={24}
               priority
-            />
-         
-        </div>
-        <div className="hidden gap-6 lg:flex">
-          <ul className="flex gap-[24px] text-slate-700 dark:text-[#D1D5DB] items-center">
+            /></div>
+        <div className="hidden lg:block">
+        <ul className="flex gap-6">
             <li>Home</li>
             <li>Blog</li>
             <li>Contact</li>
           </ul>
-
-          <ul className="flex gap-[24px] justify-center items-center ">
-          
-            <li className="bg-[#D1D5DB] justify-center items-center rounded-lg w-[104px] h-[24px] text-[10px] ">
-              <button className=" placeholder:Search text-slate-900"></button>
-            </li>
-          </ul>
         </div>
-      </div>
+        <div className="hidden lg:block">
+  
+
+  <label class="relative flex imens-center">
+  <input class="placeholder:italic placeholder:text-slate-400 block bg-[#D1D5DB] w-full border border-slate-300 rounded-md py-1 pr-2 shadow-sm sm:text-sm" placeholder="Search" type="text" name="search"/>
+  <div className="absolute pt-2 pl-40">
+  < IoMdSearch />
+  </div>
+</label>
+  
+        </div>
+       <div className="lg:hidden"><IoIosMenu /></div>
     </main>
 
     // min-h-screen 	min-height: 100vh

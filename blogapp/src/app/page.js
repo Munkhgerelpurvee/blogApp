@@ -6,8 +6,8 @@ export default function Home() {
   return (
     <main >
       <div className="">
-        <Navbar />
-        <Container>
+        <Navbar/>
+        <Container className="bg-red">
           <Footer />
         </Container>
       </div>
