@@ -1,11 +1,11 @@
 "use client";
 import Image from "next/image";
-// import { IoMdSearch } from "react-icons/io";
-// import { IoIosMenu } from "react-icons/io";
+import { IoMdSearch } from "react-icons/io";
+import { IoIosMenu } from "react-icons/io";
 
 export default function Navbar() {
   return (
-    <main className="flex justify-between p-4 bg-slate-200">
+    <main className="flex justify-between p-4 bg-slate-200 mb-6">
         <div className="">
             <Image
               src="/Logo.svg"
@@ -27,12 +27,14 @@ export default function Navbar() {
   <label class="relative flex imens-center">
   <input class="placeholder:italic placeholder:text-slate-400 block bg-[#D1D5DB] w-full border border-slate-300 rounded-md py-1 pr-2 shadow-sm sm:text-sm" placeholder="Search" type="text" name="search"/>
   <div className="absolute pt-2 pl-40">
-  {/* < IoMdSearch /> */}
+  < IoMdSearch />
   </div>
 </label>
   
         </div>
-       {/* <div className="lg:hidden"><IoIosMenu /></div> */}
+       <div className="lg:hidden"><IoIosMenu /></div>
+
+
     </main>
 
     // min-h-screen 	min-height: 100vh

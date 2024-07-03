@@ -7,12 +7,13 @@ import { Slider } from "../components/Slider";
 import { Allblog } from "../components/Allblog";
 import {useState, useEffect} from "react";
 
-
+import Custom404 from "../components/404"
+import { parseISO, format } from "date-fns";
 
 const getArticle = async () => {
-  const res = await fetch("https://dev.to/api/articles");
+  const response = await fetch("https://dev.to/api/articles");
 
-  const articles = res.json();
+  const articles = response.json();
   return articles;
 };
 
@@ -21,16 +22,13 @@ const getArticle = async () => {
 export default function Home() {
 
   // const [a, setA] = useState(0);
-
   const [articles, setArticles] = useState([]);
 
 
 
   const getData = async () => {
     const data = await getArticle();
-
     setArticles(data);
-
   }
 
 
@@ -41,30 +39,23 @@ export default function Home() {
   // useEffect(() => {
   //   console.log("Hi");;
   // }, []);
-
   // console.log(a);
 
 
   return (
     <main >
-
-
       {/* <button onClick={() => {
         setA(a+1);
       }}>Add button</button> */}
 
-
       <div className="">
         <Navbar/>
-
         <Container background="[#F9FAFB] dark:bg-[#111827]">
           <Footer />
         </Container>
         <Container background="bg-[#fff] dark:bg-[#030712]">
           <Slider/>
         </Container>
-
-
         <Container background="bg-[#fff] dark:bg-[#030712]">
           <Allblog articles={articles}/>
         </Container>  
@@ -74,4 +65,3 @@ export default function Home() {
     </main>
   );
 };
-
