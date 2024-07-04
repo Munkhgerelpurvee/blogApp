@@ -2,13 +2,15 @@
 "use client";
 import Navbar from "../components/Navbar";
 import { Container } from "../assets/Container";
-import Footer from "../components/Footer";
+// import Footer from "../components/Footer";
 import { Slider } from "../components/Slider";
 import { Allblog } from "../components/Allblog";
 import {useState, useEffect} from "react";
 
-import Custom404 from "../components/404"
-import { parseISO, format } from "date-fns";
+// import Custom404 from "../components/404"
+// import { format } from "date-fns";
+
+
 
 const getArticle = async () => {
   const response = await fetch("https://dev.to/api/articles");
@@ -50,13 +52,13 @@ export default function Home() {
 
       <div className="">
         <Navbar/>
-        <Container background="[#F9FAFB] dark:bg-[#111827]">
+        {/* <Container background="[#F9FAFB] dark:bg-[#111827]">
           <Footer />
-        </Container>
+        </Container> */}
         <Container background="bg-[#fff] dark:bg-[#030712]">
           <Slider/>
         </Container>
-        <Container background="bg-[#fff] dark:bg-[#030712]">
+        <Container background="">
           <Allblog articles={articles}/>
         </Container>  
       </div>

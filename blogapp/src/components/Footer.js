@@ -1,8 +1,8 @@
-import Image from "next/image";
-import { MdFacebook } from "react-icons/md";
-import { FaTwitter } from "react-icons/fa6";
-import { FaInstagram } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa6";
+// import Image from "next/image";
+// import { MdFacebook } from "react-icons/md";
+// import { FaTwitter } from "react-icons/fa6";
+// import { FaInstagram } from "react-icons/fa";
+// import { FaLinkedin } from "react-icons/fa6";
 
 export default function Footer() {
   return (
