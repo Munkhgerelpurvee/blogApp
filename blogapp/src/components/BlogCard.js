@@ -1,37 +1,35 @@
+
+
 export const BlogCard = ({ image, title, date, tags }) => {
-  console.log("Image", image);
-  console.log("Where is tag", tags);
-  console.log("Where is date", date);
-  console.log("Where is title", title);
+
+  // console.log("Image", image);
+  // console.log("Where is tag", tags);
+  // console.log("Where is date", date);
+  // console.log("Where is title", title);
   
-
-  
-
-
   return (
-    <main className="flex flex-col gap-5 p-4 border rounded-md ">
-      <div>
-        <img className="flex flex-col py-2" src={image} alt="image" />
+    <div className="border p-4 flex flex-col gap-4 w-full rounded-md bg-white">
+      <img src={image} alt="image" className="aspect-[2/1] w-full rounded-md" />
 
-        <div className="flex flex-col gap-4 py-2">
-          <div className="flex flex-wrap gap-3">
-            {tags.map((tag) => {
-              <BlogTag key={tag} tag={tag} />;
-            })}
-          </div>
+      <div className="py-2 flex flex-col gap-4">
+        <div className="flex gap-2 flex-wrap">
+          {tags.map((mapedtag, index) => (
+            <BlogTag key={index} itemtag={mapedtag} />
+          ))}
         </div>
 
-        <h3 className="text-2xl font-font-semibold">{title}</h3>
-        <div className="text-gray-400">{date}</div>
+        <h3 className="font-semibold text-2xl">{title}</h3>
+
+        <p className="text-gray-500">{date}</p>
       </div>
-    </main>
+    </div>
   );
 };
 
-const BlogTag = ({ tag }) => {
+const BlogTag = ({ itemtag }) => {
   return (
-    <div className="bg-[#4b6bfb0b] py-1 px-4 rounded-md ">
-      <p className="text-[4B6BFB] font-medium text-md capitalize"> {tag} </p>
+    <div className="bg-gray-200 py-1 px-[10px] rounded-md">
+      <p className="text-[#4B6BFB] font-medium text-md capitalize">{itemtag}</p>
     </div>
   );
 };

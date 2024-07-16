@@ -36,7 +36,7 @@ export const Allblog = () => {
       `https://dev.to/api/articles?page=1&per_page=${perPage}
        ${category !== "All" ? `&tag=${category}` : ""}`
     )
-      .then((response) => response.json())
+      .then((resourse) => resourse.json())
       .then((data) => setBlogs(data))
       .catch((error) => console.log(error))
       .finally(() => setLoading(false));
@@ -46,16 +46,16 @@ export const Allblog = () => {
   
 
   return (
-    <div className="flex flex-col w-full gap-8 lg:W-[1200px] m-auto">
+    <div className="flex flex-col mx-24 gap-8 lg:W-[1200px] m-auto">
       <h1 className="mt-3 text-2xl font-bold">All blog post</h1>
       <div className="flex gap-6 px-4">
         
-        {categories.map((item) => (
+        {categories.map((item, index) => (
           <button
-            className="px-2 py-1 rounded-sm bg-slate -300"
-            style={{ color: category == item ? "#4B6BFB" : "" }}
-            
-            key={item}
+            className="px-2 py-1 rounded-md bg-gray-300"
+            style={{ color: category === item ? "#4B6BFB" : "" }}
+    
+            key={index}
             onClick={() => handleCategoty(item)}
           >
           
@@ -80,7 +80,7 @@ export const Allblog = () => {
       </div>
       
       <button
-        className="m-auto W-[200px] py-2 px-5 bg-[#4B6BFB] text-slate-700 rounded-md"
+        className="m-auto W-[200px] py-2 px-5 mb-10 bg-[#4B6BFB] text-slate-700 rounded-md"
         onClick={handleLoadMore}
       >
         {loading ? <p>Loading ...</p> : <p>Load More</p>}
