@@ -52,7 +52,7 @@ export const Allblog = () => {
         
         {categories.map((item, index) => (
           <button
-            className="px-2 py-1 rounded-md bg-gray-300"
+            className="px-2 py-1 bg-gray-300 rounded-md"
             style={{ color: category === item ? "#4B6BFB" : "" }}
     
             key={index}
@@ -88,7 +88,7 @@ export const Allblog = () => {
 
       
       {/* 
-  <div className="flex flex-col p-4 gap4">
+          <div className="flex flex-col p-4 gap4">
 
 {
     articles.map((item, index) => {

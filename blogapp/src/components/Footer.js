@@ -8,7 +8,7 @@ import Link from "next/link";
 export default function Footer() {
   return (
 
-    <main className="flex justify-between p-2 bg-slate-100 m-auto">
+    <main className="fixed bottom-0 left-0 justify-between w-full p-2 m-auto bg-slate-100">
       <div className="w-full m-auto lg:[1200px] h-[64px] flex justify-between items-center">
 
 
@@ -25,7 +25,7 @@ export default function Footer() {
             </div>
 
             <div className="hidden lg:block">
-        <ul className="flex gap-6 font-bold">
+        <ul className="flex gap-6 ">
           <li>
               <Link href="page.js">Terms of Use</Link>
           </li>
