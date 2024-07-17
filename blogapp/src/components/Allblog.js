@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
-
 import { BlogCard } from "./BlogCard";
+import Link from "next/link";
+
 
 const categories = [
   "All",
@@ -29,6 +30,9 @@ export const Allblog = () => {
 
   // Ask this???
 
+
+  // 
+
   useEffect(() => {
     setLoading(true);
 
@@ -48,7 +52,10 @@ export const Allblog = () => {
   return (
     <div className="flex flex-col mx-24 gap-8 lg:W-[1200px] m-auto">
       <h1 className="mt-3 text-2xl font-bold">All blog post</h1>
-      <div className="flex gap-6 px-4">
+      
+      <div className="flex justify-between">
+
+      <div className="flex gap-6">
         
         {categories.map((item, index) => (
           <button
@@ -64,10 +71,22 @@ export const Allblog = () => {
         )}
       </div>
 
+      <div className="">
+        
+        <Link href={`/blogs/`}>
+        View All
+        </Link>
+        
+        </div>
+
+      </div>
+
 
       <div className="grid grid-cols-3 gap-6 w-fill">
         {blogs.map((blog) => {
           return (
+            <Link key={blog.id} href={`/blogs/${blog.id}`}>
+            
             <BlogCard
               key={blog.title}
               image={blog.social_image}
@@ -75,39 +94,20 @@ export const Allblog = () => {
               date={blog.published_at}
               tags={blog.tag_list}
             />
+            
+            </Link>
           );
         })}
       </div>
       
       <button
-        className="m-auto W-[200px] py-2 px-5 mb-10 bg-[#4B6BFB] text-slate-700 rounded-md"
+        className="m-auto W-[200px] py-2 px-5 mb-[150px] bg-[#4B6BFB] text-slate-700 rounded-md"
         onClick={handleLoadMore}
       >
         {loading ? <p>Loading ...</p> : <p>Load More</p>}
       </button>
 
-      
-      {/* 
-          <div className="flex flex-col p-4 gap4">
-
-{
-    articles.map((item, index) => {
-     return(
-        <>
-            <BlogCard
-            cover={item.cover_image}
-            tag={item.tags}
-            desc={item.description}
-            date={item.published_at}
-            />
-        </>
-         
-     );
- 
-    })
-}
-
-</div> */}
+  
     </div>
   );
 };

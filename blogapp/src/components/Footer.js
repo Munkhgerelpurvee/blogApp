@@ -8,7 +8,7 @@ import Link from "next/link";
 export default function Footer() {
   return (
 
-    <main className="fixed bottom-0 left-0 justify-between w-full p-2 m-auto bg-slate-100">
+    <main className="fixed bottom-0 left-0  text-[#3B3C4A] justify-between w-full p-2 m-auto bg-slate-100">
       <div className="w-full m-auto lg:[1200px] h-[64px] flex justify-between items-center">
 
 
@@ -27,11 +27,11 @@ export default function Footer() {
             <div className="hidden lg:block">
         <ul className="flex gap-6 ">
           <li>
-              <Link href="page.js">Terms of Use</Link>
+              <Link href="page.js">Terms of Use |</Link>
           </li>
 
           <li> 
-              <Link href="/posts/first-post/">Privacy Policy</Link>
+              <Link href="/posts/first-post/">Privacy Policy |</Link>
           </li>
 
         <li>
@@ -46,9 +46,9 @@ export default function Footer() {
        <ul className="flex gap-6 mx-24">
 
                   <li style={{color:"red"}}>< MdFacebook /></li>
-                  <li tyle={{color:"red"}}><FaTwitter /></li>
-                  <li tyle={{color:"blue"}}><FaInstagram /></li>
-                  <li tyle={{color:"yellow"}}><FaLinkedin /></li>
+                  <li style={{color:"green"}}><FaTwitter /></li>
+                  <li style={{color:"blue"}}><FaInstagram /></li>
+                  <li style={{color:"gray"}}><FaLinkedin /></li>
       </ul>
 
   

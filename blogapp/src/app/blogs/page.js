@@ -7,7 +7,7 @@ import { BlogCard } from "../../components/BlogCard";
 
 
 
-export default function Page() {
+export default function BlogPage() {
 
     const [blogs, setBlogs] = useState([]);
 
@@ -36,6 +36,8 @@ export default function Page() {
     <Navbar/>
 
     <main className="flex flex-col mx-[100px] my-14 gap-8 lg:W-[1200px] m-auto">
+    
+    <h1 className="mt-10 text-2xl font-bold">All blog post</h1>
         <div className="grid w-full grid-cols-3 gap-6">
             {blogs.map((blog) => (
                 <Link key={blog.id} href={`/blogs/${blog.id}`}>
@@ -59,7 +61,6 @@ export default function Page() {
 
     </main>
 
-    <div>Blogs page</div>
     <Footer />
     
     

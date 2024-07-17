@@ -31,6 +31,8 @@ export const Carousel = () => {
       .finally(() => setLoading(false));
   }, []);
 
+  if (!blogs) return <>Loading</>;
+
   console.log(blogs);
 
   return (

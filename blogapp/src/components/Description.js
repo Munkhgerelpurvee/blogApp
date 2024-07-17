@@ -8,7 +8,7 @@ import Image from "next/image";
 const Description = ({ clickNext, clickPrev }) => {
   return (
    
-          <div className="bottom-0  mt-3  mb-6 w-full flex justify-center items-center">
+          <div className="bottom-0 flex items-center justify-center w-full mt-3 mb-6">
             <div
               className="bottom-0 cursor-pointer "
               onClick={clickPrev}
