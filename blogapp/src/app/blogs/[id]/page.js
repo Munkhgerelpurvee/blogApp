@@ -71,7 +71,7 @@ const BlogId = () => {
           <h1 className="my-10 text-2xl font-semibold">{blog.description}</h1>
           <br />
 
-          <div dangerouslySetInnerHTML={{ __html: blog.body_html }}></div>
+          <div className="[&>p]:text-md [&>p]:leading-7 [&>p]:py-4 [&>h2]:text-2xl [&>h2]:py-4 [&>img]:w-full" dangerouslySetInnerHTML={{ __html: blog.body_html }}></div>
           <br/>
           <br/>
           {/* <div> dangerouslySetInnerHTML={{ __html: blog.body_markdown }}</div> */}

@@ -34,16 +34,16 @@ export default function Home() {
       <Navbar />
       <Carousel/>
       <Trending/>
-      <Comment zohiogch = "Сараа"/>
+      {/* <Comment zohiogch = "Сараа"/> */}
       {/* <Comment zohiogch = "Идэрбат"/> */}
     
-       <Container background="[#ccc]">
+       {/* <Container background="[#ccc]"> */}
         {/* <Mybutton btnName = "Миний товч" btnText = "Click!"/>  */}
         <br/>
         {/* <Mybutton btnName = "ЛАЙТАЙ ГОЁ товч" btnText = "Click Here"/> */}
         <br/>
         {/* <Mybutton/> */}
-       </Container>
+       {/* </Container> */}
       <Container background="red">
       <Allblog />
       </Container>

@@ -33,7 +33,7 @@ export const Carousel = () => {
 
   if (!blogs) return <>Loading</>;
 
-  console.log(blogs);
+  // console.log(blogs);
 
   return (
     <div className="">

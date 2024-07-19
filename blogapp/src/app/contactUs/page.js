@@ -43,7 +43,15 @@ export default function Page() {
           <br/>
 
           <input class="placeholder:italic placeholder:text-slate-400 block bg-[#fff] w-full border border-slate-300 rounded-md p-16 shadow-sm sm:text-sm" placeholder="Write a massage" type="text"/> 
+
+           <button
+            className="p-2 W-[200px] bg-[#4B6BFB] mt-3 text-[#fff] text-sm rounded-md">
+             Send Message
+           </button>
+
           </div>
+
+
 
         </main>
         <Footer />
