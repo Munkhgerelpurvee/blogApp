@@ -50,12 +50,12 @@ export const Allblog = () => {
   
 
   return (
-    <div className="flex flex-col mx-24 gap-8 lg:W-[1200px] m-auto">
+    <div className="flex flex-col mx-24 gap-8 md:W-[1200px] m-auto md:flex-col ">
       <h1 className="mt-3 text-2xl font-bold">All blog post</h1>
       
       <div className="flex justify-between">
 
-      <div className="flex gap-6">
+      <div className="flex gap-3 flex-wrap">
         
         {categories.map((item, index) => (
           <button
@@ -71,7 +71,7 @@ export const Allblog = () => {
         )}
       </div>
 
-      <div className="">
+      <div className="hidden md:block">
         
         <Link href={`/blogs/`}>
         View All
@@ -82,7 +82,7 @@ export const Allblog = () => {
       </div>
 
 
-      <div className="grid grid-cols-3 gap-6 w-fill">
+      <div className="grid grid-cols-1 gap-6 w-full md:grid-cols-3">
         {blogs.map((blog) => {
           return (
             <Link key={blog.id} href={`/blogs/${blog.id}`}>

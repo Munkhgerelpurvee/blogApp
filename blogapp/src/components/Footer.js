@@ -12,7 +12,7 @@ export default function Footer() {
       <div className="w-full m-auto lg:[1200px] h-[64px] flex justify-between items-center">
 
 
-        <div  className="mx-24">
+        <div  className="mx-24 hidden lg:block">
             <Image
               src="/Logo.svg"
               alt="Logo"
@@ -43,7 +43,7 @@ export default function Footer() {
  
     <div className="">
   
-       <ul className="flex gap-6 mx-24">
+       <ul className="flex gap-6 mx-24 items-center m-auto">
 
                   <li style={{color:"red"}}>< MdFacebook /></li>
                   <li style={{color:"green"}}><FaTwitter /></li>

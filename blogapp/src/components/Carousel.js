@@ -37,7 +37,7 @@ export const Carousel = () => {
 
   return (
     <div className="">
-      <main className="flex place-items-center w-full mt-[130px] mx-auto max-w-2xl shadow-2xl rounded-2xl">
+      <main className="flex place-items-center w-full mt-[130px] mx-auto max-w-2xl shadow-2xl rounded-2xl md:W-[1200px] m-auto">
         <div
           className={`w-full flex justify-center items-center gap-4  md:rounded-2xl p-6 md:p-0`}
         >
@@ -46,19 +46,13 @@ export const Carousel = () => {
               key={idx}
               className={`${
                 idx === activeImage
-                  ? "flex w-10xl h-[50vh] object-cover"
+                  ? "flex w-full h-screen object-cover"
                   : "hidden"
               }`}
             >
-              {/* <Image
-               src={elem.cover_image}
-               alt=""
-               width={100}
-               height={100}
-               className="object-cover w-full mt-8 rounded-lg "
-             /> */}
+            
               <div
-                className="w-[570px] h-[570px]"
+                className="w-full h-screen  "
                 style={{
                   backgroundImage: `url(${elem.cover_image})`,
                   backgroundSize: "cover",

@@ -35,13 +35,13 @@ export default function Navbar() {
               type="text"
               name="search"
             />
-            <div className="absolute pt-2 pl-[140px]">
+            <div className="absolute pt-2 pl-[180px]">
               <IoMdSearch />
             </div>
           </label>
         </div>
 
-        <div className="lg:hidden">
+        <div className="lg:hidden pr-10">
           <IoIosMenu />
         </div>
       </div>

@@ -3,8 +3,7 @@ import { useParams } from "next/navigation";
 import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
 import { useState, useEffect } from "react";
-import { BlogCard } from "../../../components/BlogCard";
-import Image from "next/image";
+import Date from "../../../components/Date";
 
 
 
@@ -57,8 +56,12 @@ const BlogId = () => {
             className="object-cover rounded-full "
             />  
 
-          <p className="pt-6 text-gray-500 mb-11">{blog.user.twitter_username}</p> 
-          <p className="pt-6 text-gray-500 mb-11">{blog.published_at}</p> 
+          <p className="pt-8 text-gray-500 font-semibold mb-11">{blog.user.twitter_username}</p> 
+         
+          <div className="text-gray-500 font-semibold pt-8 mb-11">
+          <Date  dateString = {blog.published_at}/>
+
+          </div>
 
           </div>
 
@@ -71,10 +74,10 @@ const BlogId = () => {
           <h1 className="my-10 text-2xl font-semibold">{blog.description}</h1>
           <br />
 
-          <div className="[&>p]:text-md [&>p]:leading-7 [&>p]:py-4 [&>h2]:text-2xl [&>h2]:py-4 [&>img]:w-full" dangerouslySetInnerHTML={{ __html: blog.body_html }}></div>
+          <div className="[&>p]:text-md [&>p]:leading-7 [&>p]:mb-4 [&>p]:py-6 [&>h2]:text-2xl [&>h2]:py-4 [&>img]:w-full" dangerouslySetInnerHTML={{ __html: blog.body_html }}></div>
           <br/>
           <br/>
-          {/* <div> dangerouslySetInnerHTML={{ __html: blog.body_markdown }}</div> */}
+        
           <br />
 
     

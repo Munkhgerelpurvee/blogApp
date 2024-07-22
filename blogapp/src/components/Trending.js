@@ -14,7 +14,7 @@ export const Trending = () => {
   useEffect(() => {
     setLoading(true);
 
-    fetch(`https://dev.to/api/articles?page=10&per_page=4`)
+    fetch(`https://dev.to/api/articles?page=1&per_page=4`)
       .then((resourse) => resourse.json())
       .then((data) => setBlogs(data))
       .catch((error) => console.log(error))
@@ -33,33 +33,18 @@ export const Trending = () => {
 
         
 
-        <div className="flex justify-between gap-6 ">
+        <div className="grid grid-cols-1 gap-4 w-full h-screen md:grid-cols-4 ">
 
         {blogs.map((blog) => {
           return (
             <Link key={blog.id} href={`/blogs/${blog.id}`}>
-        
-              {/* <div
-                className="w-[393px] h-[450px] rounded-md object-cover"
-                style={{
-                  backgroundImage: `url(${blog.cover_image})`,
-                  backgroundSize: "cover",
-                  backgroundPosition: "center",
-                }}
-              ></div> */}
 
-        
-        <TrendingCard
-        title = {blog.title}
-        tags = {blog.tag_list}
-        image={blog.social_image}/>
-
-          
+                 <TrendingCard
+                  title = {blog.title}
+                  tags = {blog.tag_list}
+                  image={blog.social_image}/>
         
             </Link>
-
-
-
 
           );
         })}
@@ -72,12 +57,6 @@ export const Trending = () => {
   };
   
 
-
-
-
-
-  
-
   const TrendingCard = ({ title, tags, image}) => {
     
     return (
@@ -85,20 +64,20 @@ export const Trending = () => {
 <div>
 
 
-    <div className="relative">
+    <div className="relative flex flex-col p-4 bg-white border rounded-md">
 
-     <img src={image} alt="image" className="aspect-[2/1] rounded-md gap-4 object-cover h-[450px] w-96 "
+     <img src={image} alt="image" className="aspect-[2/1] rounded-md gap-4 object-cover h-screen w-96 "
       style = {{backgroundColor:"rgba(255, 99, 71, 0.6)"}}/>
   
 
 
-     <div className="absolute w-[280px] mx-auto  bottom-3 left-2 py-4">
+     <div className="absolute w-[280px] mx-auto bottom-3 left-8 py-4">
 
        <div className="bg-[#4B6BFB] py-1 px-[5px] rounded-md w-[80px] z-50 mb-4">
-        <p className="text-[#fff] font-medium text-md capitalize text-xs w-1.5">{tags[0]}</p>
+        <p className="text-[#fff] font-medium text-md capitalize text-xs">{tags[0]}</p>
       </div>
   
-       <h3 className=" text-base font-semibold text-[#fff] z-50">{title}</h3>
+       <h3 className="flex flex-wrap text-base font-semibold text-[#fff] z-50">{title}</h3>
    
 
      </div>

@@ -1,6 +1,9 @@
+const dateFns = require("date-fns");
+import Date from "./Date";
 
 
 export const BlogCard = ({ image, title, date, tags }) => {
+  
 
   // console.log("Image", image);
   // console.log("Where is tag", tags);
@@ -19,8 +22,11 @@ export const BlogCard = ({ image, title, date, tags }) => {
         </div>
 
         <h3 className="text-2xl font-semibold">{title}</h3>
+    
+        <div className="text-gray-500 font-semibold">
+        <Date  dateString = {date}/>
 
-        <p className="text-gray-500">{date}</p>
+        </div>
       </div>
     </div>
   );

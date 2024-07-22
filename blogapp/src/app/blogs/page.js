@@ -35,10 +35,10 @@ export default function BlogPage() {
 
     <Navbar/>
 
-    <main className="flex flex-col mx-[100px] my-14 gap-8 lg:W-[1200px] m-auto">
+    <main className="flex flex-col mx-[100px] my-14 gap-8 md:max-w-[1200px] m-auto">
     
     <h1 className="mt-10 text-2xl font-bold">All blog post</h1>
-        <div className="grid w-full grid-cols-3 gap-6">
+        <div className="grid w-full grid-cols-1 gap-6 md:grid-cols-3">
             {blogs.map((blog) => (
                 <Link key={blog.id} href={`/blogs/${blog.id}`}>
                   <BlogCard
