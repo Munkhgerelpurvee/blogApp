@@ -4,6 +4,8 @@ import Navbar from "../../../components/Navbar";
 import Footer from "../../../components/Footer";
 import { useState, useEffect } from "react";
 import Date from "../../../components/Date";
+import Image from "next/image";
+import { ImGit } from "react-icons/im";
 
 
 
@@ -50,7 +52,7 @@ const BlogId = () => {
 
             <img
             src={blog.user.profile_image}
-            alt="image"
+            alt="profile"
             width={70}
             height={0}
             className="object-cover rounded-full "
@@ -67,7 +69,7 @@ const BlogId = () => {
 
           <img
             src={blog.cover_image}
-            alt="image"
+            alt="Cover Image"
             className="object-cover aspect-[2/1] w-full rounded-lg"
           />
           <br />

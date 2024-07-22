@@ -1,5 +1,6 @@
 const dateFns = require("date-fns");
 import Date from "./Date";
+import Image from "next/image";
 
 
 export const BlogCard = ({ image, title, date, tags }) => {
@@ -12,7 +13,7 @@ export const BlogCard = ({ image, title, date, tags }) => {
   
   return (
     <div className="flex flex-col w-full gap-4 p-4 bg-white border rounded-md">
-      <img src={image} alt="image" className="aspect-[2/1] w-full rounded-md" />
+      <img src={image} alt="image"  className="aspect-[2/1] w-full rounded-md" />
 
       <div className="flex flex-col gap-4 py-2">
         <div className="flex flex-wrap gap-2">

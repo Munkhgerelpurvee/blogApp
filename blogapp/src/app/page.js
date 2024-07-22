@@ -5,12 +5,12 @@ import Footer from "../components/Footer";
 
 import { Allblog } from "../components/Allblog";
 import { useState, useEffect } from "react";
-import {Promise} from "../components/Promise"
 import { Trending } from "../components/Trending"
 import { Carousel} from "../components/Carousel"
 import { Mybutton } from "../components/MyButton";
 import {Comment} from "../components/Comment";
-import Link from "next/link"
+
+
 
 
 // import Custom404 from "../components/404"

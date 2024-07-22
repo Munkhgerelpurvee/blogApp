@@ -30,8 +30,8 @@ export const Mybutton = (props) => {
         />
 
         <div>
-            {commentHistory.map(el=> (
-                <div>{el}</div>
+            {commentHistory.map((el, index)=> (
+                <div key={index}>{el}</div>
             ))}
         </div>
 
