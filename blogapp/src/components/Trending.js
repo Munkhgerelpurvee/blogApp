@@ -33,7 +33,7 @@ export const Trending = () => {
 
         
 
-        <div className="grid grid-cols-1 gap-4 w-full h-screen md:grid-cols-4 ">
+        <div className="grid w-full h-screen grid-cols-1 gap-4 md:grid-cols-4 ">
 
         {blogs.map((blog) => {
           return (
@@ -64,16 +64,16 @@ export const Trending = () => {
 <div>
 
 
-    <div className="relative flex flex-col p-4 bg-white border rounded-md">
+    <div className="relative" style = {{backgroundColor:"rgba(255, 99, 71, 0.7)"}}>
 
-     <img src={image} alt="image" className="aspect-[2/1] rounded-md gap-4 object-cover h-screen w-96 "
-      style = {{backgroundColor:"rgba(255, 99, 71, 0.6)"}}/>
+     <img src={image} alt="image" className="aspect-[2/1] rounded-lg gap-4 object-cover min-h-[450px] min-w-96 -z-20 "
+      />
   
 
 
      <div className="absolute w-[280px] mx-auto bottom-3 left-8 py-4">
 
-       <div className="bg-[#4B6BFB] py-1 px-[5px] rounded-md w-[80px] z-50 mb-4">
+       <div className="bg-[#4B6BFB] py-1 px-[5px] rounded-md z-50 mb-4 flex">
         <p className="text-[#fff] font-medium text-md capitalize text-xs">{tags[0]}</p>
       </div>
   

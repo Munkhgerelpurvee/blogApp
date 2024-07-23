@@ -27,7 +27,7 @@ const BlogId = () => {
     };
 
     getData();
-  }, []);
+  }, [id]);
 
   if (!blog) return <>Loading</>;
 
@@ -58,9 +58,9 @@ const BlogId = () => {
             className="object-cover rounded-full "
             />  
 
-          <p className="pt-8 text-gray-500 font-semibold mb-11">{blog.user.twitter_username}</p> 
+          <p className="pt-8 font-semibold text-gray-500 mb-11">{blog.user.twitter_username}</p> 
          
-          <div className="text-gray-500 font-semibold pt-8 mb-11">
+          <div className="pt-8 font-semibold text-gray-500 mb-11">
           <Date  dateString = {blog.published_at}/>
 
           </div>
