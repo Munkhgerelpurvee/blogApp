@@ -5,6 +5,7 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import Image from "next/image";
 import { Container } from "../../components/Container";
+import Date from "../../components/Date";
 
 const pageSize = 6;
 export default function BlogPage() {
@@ -40,12 +41,12 @@ export default function BlogPage() {
 
       <Container>
         <div className="w-full px-4 h-fit">
-          <div className="flex flex-col items-center justify-center w-full gap-y-20 h-fit">
-            <h1 className="p-4 mx-24 mt-24 text-2xl font-bold">
+          <div className="flex flex-col justify-center w-full gap-y-10 h-fit">
+            <h1 className="px-4 mx-24 mt-24 text-2xl font-bold">
               All blog post
             </h1>
 
-            <div className="grid items-center gap-4 md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid  mx-24  items-center gap-4 md:grid-cols-2 lg:grid-cols-3">
               {/* {
         art.map((item, index) => ( 
           <div key={index}>{item.title}</div>
@@ -72,13 +73,14 @@ export default function BlogPage() {
                       </Link>
 
                       <div className="flex gap-2 items-center mt-4 text-[#fff]">
+                        
                         <Image
                           src={el.user.profile_image_90}
                           width={30}
                           height={50}
                         />
-                        <div>{el.user.name}</div>
-                        <div>{el.published_at}</div>
+                        <div className="text-[10px]">{el.user.name}</div>
+                        <Date  className = " flex text-[5px]" dateString={el.published_at}/>
                       </div>
                     </div>
                   </Link>

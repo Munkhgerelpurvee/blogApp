@@ -10,12 +10,12 @@ export default function Page() {
       <Navbar />
 
       <Container>
-        <main className="my-24 gap-8 md:min-w-[1200px] mx-24">
+        <main className="my-24 gap-8 md:min-w-[800px] mx-24">
           <div>
-            <h1 className="my-8 mt-3 text-2xl font-bold mb-8 flex justify-center mx-24 md:max-w-[1200px]">
+            <h1 className="my-8 text-2xl font-bold flex mx-24 md:max-w-[800px]">
               Contact Us
             </h1>
-            <p className="mb-8 mx-24  w-[600px] md:max-w-[1200px]">
+            <p className="mx-24 w-[600px] md:max-w-[1200px] md:min-h-44 ">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur

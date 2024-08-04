@@ -72,7 +72,7 @@ export const Allblog = () => {
       </div>
 
       <div className="hidden md:block">
-        
+
         <Link href={`/blogs/`}>
         View All
         </Link>

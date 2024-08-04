@@ -14,7 +14,7 @@ export const Trending = () => {
   useEffect(() => {
     setLoading(true);
 
-    fetch(`https://dev.to/api/articles?page=1&per_page=4`)
+    fetch(`https://dev.to/api/articles?page=4&per_page=4`)
       .then((resourse) => resourse.json())
       .then((data) => setBlogs(data))
       .catch((error) => console.log(error))
@@ -28,12 +28,12 @@ export const Trending = () => {
 
 
     return (
-      <main className="flex flex-col  mx-24 gap-8  lg:W-[1200px] mb-10 m-auto ">
+      <main className="flex flex-col mx-24 gap-8 md:W-[1200px] m-auto md:flex-col ">
         <h1 className="mt-3 text-2xl font-bold">Trending</h1>
 
         
 
-        <div className="grid w-full h-screen grid-cols-1 gap-4 md:grid-cols-4 ">
+        <div className="grid grid-cols-1 gap-6 w-full md:grid-cols-2 mx-auto lg:grid-cols-4">
 
         {blogs.map((blog) => {
           return (
@@ -61,29 +61,27 @@ export const Trending = () => {
     
     return (
 
-<div>
+<div className=" relative flex flex-col max-w-[273px] min-h-[320px]  justify-end rounded-xl bg-[#141624] bg-opacity-40 object-cover">
 
 
-    <div className="relative" style = {{backgroundColor:"rgba(255, 99, 71, 0.7)"}}>
 
-     <img src={image} alt="image" className="aspect-[2/1] rounded-lg gap-4 object-cover min-h-[450px] min-w-96 -z-20 "
+     <img src={image} alt="image" className="absolute top-0 left-0 max-w-[273px] min-h-[320px] -z-10 rounded-xl"
       />
   
 
 
-     <div className="absolute w-[280px] mx-auto bottom-3 left-8 py-4">
-
-       <div className="bg-[#4B6BFB] py-1 px-[5px] rounded-md z-50 mb-4 flex">
-        <p className="text-[#fff] font-medium text-md capitalize text-xs">{tags[0]}</p>
-      </div>
+     <div className="px-8 pb-7 rounded-2xl flex flex-col gap-3">
+         <div className="flex">
+        <div className="bg-blue-700 text-[#fff] leading-7 font-medium px-3 py-1 rounded-lg">{tags[0]}</div>
+         </div>
+     
   
-       <h3 className="flex flex-wrap text-base font-semibold text-[#fff] z-50">{title}</h3>
+       <h3 className="text-[#fff] leading-7 font-semibold">{title}</h3>
    
 
      </div>
      </div>
 
-</div>
 
 
     

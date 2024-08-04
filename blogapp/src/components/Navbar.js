@@ -28,14 +28,14 @@ export default function Navbar() {
         </div>
 
         <div className="hidden mx-24 lg:block">
-          <label class="relative flex imens-center">
+          <label class="relative flex imens-center justify-between">
             <input
               class="placeholder:italic placeholder:text-slate-400 block bg-[#D1D5DB] w-full border border-slate-300 rounded-md py-1 pr-2 shadow-sm sm:text-sm"
               placeholder="Search"
               type="text"
               name="search"
             />
-            <div className="absolute pt-2 pl-[180px]">
+            <div className="absolute pt-2 pl-[160px]">
               <IoMdSearch />
             </div>
           </label>
